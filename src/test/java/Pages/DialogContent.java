@@ -32,5 +32,21 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//span[@class='nav-link-title']")
     public WebElement txtDashboard;
 
+    @FindBy(xpath= "//ms-add-button[contains(@tooltip,'ADD')]//button")
+    public WebElement addButton;
+
+    @FindBy(xpath = "//ms-text-field[contains(@formcontrolname,'name')]/input")
+    public WebElement CountryName;
+
+    @FindBy(xpath = "//ms-text-field[contains(@formcontrolname,'code')]/input")
+    public WebElement CountryCode;
+
+    @FindBy(xpath = "//ms-save-button[@class='ng-star-inserted'] / button")
+    public WebElement SaveButton;
+
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    public WebElement SuccessMessage;
+
+
 
 }
