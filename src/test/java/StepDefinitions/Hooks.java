@@ -7,11 +7,11 @@ import io.cucumber.java.Before;
 public class Hooks {
     @Before // Cucumber ın annotation ı
     public void before(){
-        System.out.println("senaryo başladımı");
+        //System.out.println("senaryo başladımı");
     }
     @After  // Cucumber ın annotation ı
     public void after(){
-        System.out.println("senaryo bittimi");
+        //System.out.println("senaryo bittimi");
         GWD.quitDriver();
     }
 }
