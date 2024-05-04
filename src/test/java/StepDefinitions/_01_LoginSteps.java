@@ -13,13 +13,12 @@ import java.time.Duration;
 import static Utilities.GWD.driver;
 
 public class _01_LoginSteps {
-    DialogContent dc=new DialogContent();
 
+    DialogContent dc=new DialogContent();
 
     @Given("Navigate to Campus")
     public void navigate_to_campus() {
         //driver.get("https://test.mersys.io/");
-
         GWD.getDriver().get("https://test.mersys.io/");
     }
     @When("Enter username and password and click login Button")
@@ -40,7 +39,6 @@ public class _01_LoginSteps {
 
     @Then("user should login successfully")
     public void user_should_login_successfully() {
-
         dc.verifyContainsText(dc.txtDashboard, "Dashboard");
     }
 }
