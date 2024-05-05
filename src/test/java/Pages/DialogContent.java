@@ -43,6 +43,11 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     public WebElement SuccessMessage;
 
+    @FindBy(xpath = "//div[contains(text(),'already exists')]")
+    public WebElement ExistMessage;
+
+
+
 
 
 }

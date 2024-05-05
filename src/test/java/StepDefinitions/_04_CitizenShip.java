@@ -4,8 +4,9 @@ import Pages.DialogContent;
 import Pages.LeftNav;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
+import org.apache.commons.lang3.RandomStringUtils;
 
-public class _03_CitizenShip {
+public class _04_CitizenShip {
     LeftNav ln=new LeftNav();
     DialogContent dc=new DialogContent();
 
@@ -19,9 +20,12 @@ public class _03_CitizenShip {
 
     @When("Create CitizenShip")
     public void createCitizenShip() {
+        String CitizenName= RandomStringUtils.randomAlphabetic(8);
+        String CitizenShort=RandomStringUtils.randomNumeric(4);
+
         dc.Click(dc.addButton);
-        dc.mySendKeys(dc.Name,"Bakalım21");
-        dc.mySendKeys(dc.shortName,"B21");
+        dc.mySendKeys(dc.Name,CitizenName);
+        dc.mySendKeys(dc.shortName,CitizenShort);
         dc.Click(dc.SaveButton);
     }
 }
