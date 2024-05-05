@@ -27,7 +27,7 @@ public class _02_CountrySteps {
         String ulkeKodi=RandomStringUtils.randomNumeric(4);
 
      dc.Click(dc.addButton);
-     dc.mySendKeys(dc.CountryName,ulkeAdi);
+     dc.mySendKeys(dc.Name,ulkeAdi);
      dc.mySendKeys(dc.CountryCode, ulkeKodi);
      dc.Click(dc.SaveButton);
 
@@ -41,7 +41,7 @@ public class _02_CountrySteps {
     @When("Create county  name as {string} code as {string}")
     public void createCountyNameAsCodeAs(String name, String code) {
         dc.Click(dc.addButton);
-        dc.mySendKeys(dc.CountryName,name);
+        dc.mySendKeys(dc.Name,name);
         dc.mySendKeys(dc.CountryCode, code);
         dc.Click(dc.SaveButton);
     }

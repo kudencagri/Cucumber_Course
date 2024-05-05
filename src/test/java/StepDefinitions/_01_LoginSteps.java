@@ -1,8 +1,10 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
+import Pages.LeftNav;
 import Utilities.GWD;
 import io.cucumber.java.en.*;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,6 +16,7 @@ import static Utilities.GWD.driver;
 
 public class _01_LoginSteps {
 
+    LeftNav ln=new LeftNav();
     DialogContent dc=new DialogContent();
 
     @Given("Navigate to Campus")
@@ -39,6 +42,9 @@ public class _01_LoginSteps {
 
     @Then("user should login successfully")
     public void user_should_login_successfully() {
+
         dc.verifyContainsText(dc.txtDashboard, "Dashboard");
     }
+
+
 }

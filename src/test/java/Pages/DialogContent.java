@@ -1,16 +1,9 @@
 package Pages;
 
 import Utilities.GWD;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import java.time.Duration;
 
 public class DialogContent extends Parent{
 
@@ -36,10 +29,13 @@ public class DialogContent extends Parent{
     public WebElement addButton;
 
     @FindBy(xpath = "//ms-text-field[contains(@formcontrolname,'name')]/input")
-    public WebElement CountryName;
+    public WebElement Name;
 
     @FindBy(xpath = "//ms-text-field[contains(@formcontrolname,'code')]/input")
     public WebElement CountryCode;
+
+    @FindBy(xpath = "//ms-text-field[contains(@formcontrolname,'shortName')] /input")
+    public WebElement shortName;
 
     @FindBy(xpath = "//ms-save-button[@class='ng-star-inserted'] / button")
     public WebElement SaveButton;
