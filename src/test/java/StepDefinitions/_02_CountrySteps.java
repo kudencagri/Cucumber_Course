@@ -37,4 +37,12 @@ public class _02_CountrySteps {
     public void successMessageShouldBeDisplayed() {
         dc.verifyContainsText(dc.SuccessMessage, "success");
     }
+
+    @When("Create county  name as {string} code as {string}")
+    public void createCountyNameAsCodeAs(String name, String code) {
+        dc.Click(dc.addButton);
+        dc.mySendKeys(dc.CountryName,name);
+        dc.mySendKeys(dc.CountryCode, code);
+        dc.Click(dc.SaveButton);
+    }
 }
