@@ -2,9 +2,15 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Utilities.GWD;
+import com.google.gson.annotations.Until;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class _05_CitizebShipParameter {
 
@@ -40,5 +46,24 @@ public class _05_CitizebShipParameter {
     @Then("Already exist message should be displayed")
     public void alreadyExistMessageShouldBeDisplayed() {
         dc.verifyContainsText(dc.ExistMessage,"already");
+
     }
+
+    @When("delete created accounts name as {string}")
+    public void deleteCreatedAccountsNameAs(String name) {
+        dc.mySendKeys(dc.SearchName,name);
+        dc.Click(dc.SearchButton);
+
+        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(29));
+        wait.until(ExpectedConditions.elementToBeClickable(dc.DeleteButton));
+
+
+                                          // Sayfanın yenilenmesini bekle   ///***** stale hatası
+        dc.Click(dc.DeleteButton);
+        dc.Click(dc.delete);
+    }
+
+
+
+
 }

@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import com.mysql.cj.x.protobuf.MysqlxCrud;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -46,8 +47,19 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[contains(text(),'already exists')]")
     public WebElement ExistMessage;
 
+    @FindBy(xpath = "(//ms-delete-button[@class='ng-star-inserted'])[1]")
+    public WebElement DeleteButton;
 
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']")
+    public WebElement SearchName;
 
+    @FindBy(xpath = "//ms-search-button/div")
+    public WebElement SearchButton;
 
+    @FindBy(xpath = "//button[@aria-label='Close dialog']")
+    public WebElement CloseButton;
+
+    @FindBy(xpath = "//*[@class='mdc-button mat-mdc-button mdc-button--raised mat-mdc-raised-button mat-accent mat-mdc-button-base']/span")
+    public WebElement delete;
 
 }
