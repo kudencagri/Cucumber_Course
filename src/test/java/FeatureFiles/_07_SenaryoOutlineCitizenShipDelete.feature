@@ -28,7 +28,7 @@
 
 Examples:
 |name    | shortname |
-| eEw2iu3d2 | h1rt321   |
+| ew2D3d2 | h121   |
 #| eE2iu4d2 | h2rt321   |
 #| eE2iu5d2 | h3rt321   |
 #| eE2iu6d2 | h4rt321   |

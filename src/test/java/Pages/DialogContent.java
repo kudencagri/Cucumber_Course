@@ -47,10 +47,10 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[contains(text(),'already exists')]")
     public WebElement ExistMessage;
 
-    @FindBy(xpath = "(//ms-delete-button[@class='ng-star-inserted'])[1]")
+    @FindBy(xpath = "(//ms-delete-button[@class='ng-star-inserted'])[1]/button")
     public WebElement DeleteButton;
 
-    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']")
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']/input")
     public WebElement SearchName;
 
     @FindBy(xpath = "//ms-search-button/div")
@@ -59,7 +59,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//button[@aria-label='Close dialog']")
     public WebElement CloseButton;
 
-    @FindBy(xpath = "//*[@class='mdc-button mat-mdc-button mdc-button--raised mat-mdc-raised-button mat-accent mat-mdc-button-base']/span")
+    @FindBy(xpath = "(//*[@class='mdc-button mat-mdc-button mdc-button--raised mat-mdc-raised-button mat-accent mat-mdc-button-base']/span)[1]")
     public WebElement delete;
 
 }

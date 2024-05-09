@@ -47,6 +47,7 @@ public class _05_CitizebShipParameter {
     public void alreadyExistMessageShouldBeDisplayed() {
         dc.verifyContainsText(dc.ExistMessage,"already");
 
+
     }
 
     @When("delete created accounts name as {string}")
@@ -55,11 +56,14 @@ public class _05_CitizebShipParameter {
         dc.Click(dc.SearchButton);
 
         WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(29));
-        wait.until(ExpectedConditions.elementToBeClickable(dc.DeleteButton));
 
+        wait.until(ExpectedConditions.elementToBeClickable(dc.SearchButton));
+//        wait.until(ExpectedConditions.elementToBeClickable(dc.DeleteButton));
+//        wait.until(ExpectedConditions.stalenessOf(dc.delete));
 
                                           // Sayfanın yenilenmesini bekle   ///***** stale hatası
         dc.Click(dc.DeleteButton);
+
         dc.Click(dc.delete);
     }
 
