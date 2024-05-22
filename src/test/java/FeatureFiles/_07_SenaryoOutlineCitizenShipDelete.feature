@@ -28,8 +28,8 @@
 
 Examples:
 |name    | shortname |
-| Kew2g3d2 | sh1f21   |
-#| eE2iu4d2 | h2rt321   |
-#| eE2iu5d2 | h3rt321   |
-#| eE2iu6d2 | h4rt321   |
-#| eE2iu7d2 | h5rt321   |
+| eE2Ge3d3 | h1rT33  |
+#| eE2Ge4d4 | h2rT34  |
+#| eE2Ge5d5 | h3rT35   |
+#| eE2Ge6d6 | h4rT36   |
+#| eE2Ge7d7 | h5rT37   |

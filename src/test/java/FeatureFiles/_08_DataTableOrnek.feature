@@ -7,7 +7,7 @@ Feature: DataTable Ornek
     And Write username as DataTable
       | ismet  |
       | mehmet |
-      | ayşe   |
+      | ayse   |
       | fatma  |
       | Ahmet  |
       | veli   |
@@ -15,7 +15,7 @@ Feature: DataTable Ornek
     And  Write username and Password as DataTable
       | ismet  | 1234  |
       | mehmet | 23323 |
-      | ayşe   | 45454 |
+      | ayse   | 45454 |
       | fatma  | 44545 |
 
 #  dataProvider(testNG için) , Senaryo Outline(cucumber)

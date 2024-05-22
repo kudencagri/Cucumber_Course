@@ -65,7 +65,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//button[@aria-label='Close dialog']")
     public WebElement CloseButton;
 
-    @FindBy(xpath = "(//*[@class='mdc-button mat-mdc-button mdc-button--raised mat-mdc-raised-button mat-accent mat-mdc-button-base']/span)[2]")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement delete;
 
     public void deleteItem(String searchText){
@@ -80,7 +80,7 @@ public class DialogContent extends Parent{
         //2.yöntem sayfanın kendi waitini , loding ini yakalayalım. (en sağlam yöntem)
         //fuse-progress-bar/*    -> fuse-progress-bar ın çocukları
         // bu çocukların 0 olana bekle
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("(//div[@class='loading-shade ng-tns-c1233677153-66 ng-star-inserted'])[1]/*"),0));
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("(//div[@class='cdk-virtual-scroll-content-wrapper'])[1]/div/*"),0));
 
         Click(DeleteButton);
         Click(delete);
