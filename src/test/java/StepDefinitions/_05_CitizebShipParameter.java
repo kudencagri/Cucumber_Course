@@ -7,6 +7,7 @@ import com.google.gson.annotations.Until;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -52,19 +53,7 @@ public class _05_CitizebShipParameter {
 
     @When("delete created accounts name as {string}")
     public void deleteCreatedAccountsNameAs(String name) {
-        dc.mySendKeys(dc.SearchName,name);
-        dc.Click(dc.SearchButton);
-
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(29));
-
-        wait.until(ExpectedConditions.elementToBeClickable(dc.SearchButton));
-//        wait.until(ExpectedConditions.elementToBeClickable(dc.DeleteButton));
-//        wait.until(ExpectedConditions.stalenessOf(dc.delete));
-
-                                          // Sayfanın yenilenmesini bekle   ///***** stale hatası
-        dc.Click(dc.DeleteButton);
-
-        dc.Click(dc.delete);
+        dc.deleteItem(name);
     }
 
 

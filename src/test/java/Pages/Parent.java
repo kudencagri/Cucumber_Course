@@ -12,7 +12,7 @@ import org.testng.Assert;
 import java.time.Duration;
 
 public class Parent {
-    WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
+    public WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
 
     public void Click(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
