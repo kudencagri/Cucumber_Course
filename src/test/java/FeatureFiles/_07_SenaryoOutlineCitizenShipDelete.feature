@@ -27,9 +27,9 @@
 
 
 Examples:
-|name    | shortname |
-| eE2Ge3d3 | h1rT33  |
-#| eE2Ge4d4 | h2rT34  |
-#| eE2Ge5d5 | h3rT35   |
-#| eE2Ge6d6 | h4rT36   |
-#| eE2Ge7d7 | h5rT37   |
+| name     | shortname |
+| eE2Ge3d3 | h1rT33    |
+| eE2Ge4d4 | h2rT34    |
+| eE2Ge5d5 | h3rT35    |
+| eE2Ge6d6 | h4rT36    |
+| eE2Ge7d7 | h5rT37    |
