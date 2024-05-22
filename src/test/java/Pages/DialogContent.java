@@ -68,6 +68,8 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement delete;
 
+
+
     public void deleteItem(String searchText){
         mySendKeys(SearchName, searchText);
         Click(SearchButton); // fuse bar ı çocukları ortaya çıkıyor
@@ -92,6 +94,9 @@ public class DialogContent extends Parent{
         switch (strElement){
             case "addButton" : return this.addButton;
             case "saveButton" : return this.SaveButton;
+            case "Name" : return this.Name;
+            case "CountryCode" : return this.CountryCode;
+
 
         }
         return null;

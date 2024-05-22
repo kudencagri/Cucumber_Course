@@ -14,5 +14,5 @@ Feature: Country Multi Scenario
 
   Scenario: Create country 2
 
-    When Create county  name as "ismU1e1rs" code as "U185"
+    When Create county  name as "ise1rs" code as "U125k5"
     Then Success message should be displayed
