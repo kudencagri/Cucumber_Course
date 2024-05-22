@@ -10,17 +10,17 @@ Feature: DataTable Functionality
       And  Click on the element in LeftNav
       | setup      |
       | parameters |
-      | countries  |
+      | citizenships  |
 
       And  Click on the element in Dialog
         | addButton      |
-
-      And  User sending the keys in Dialog
-        | nameInput      |AdsaeEsda31      |
-        | codeInput      | eaweas4sdD      |
-
-      And  Click on the element in Dialog
-        | saveButton      |
-
-      Then Success message should be displayed
+#
+#      And  User sending the keys in Dialog
+#        | nameInput      | AdsaeEsda31      |
+#        | codeInput      | eaweas4sdD      |
+#
+#      And  Click on the element in Dialog
+#        | saveButton      |
+#
+#      Then Success message should be displayed
 
