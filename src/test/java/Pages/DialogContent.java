@@ -68,7 +68,14 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement delete;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    private WebElement integrationCode;
 
+    @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']/input")
+    private WebElement priorityCode;
+
+    @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
+    private WebElement toggleBar;
 
     public void deleteItem(String searchText){
         mySendKeys(SearchName, searchText);
@@ -96,6 +103,9 @@ public class DialogContent extends Parent{
             case "saveButton" : return this.SaveButton;
             case "Name" : return this.Name;
             case "CountryCode" : return this.CountryCode;
+            case "integrationCode" : return this.integrationCode;
+            case "priorityCode" : return this.priorityCode;
+            case "toggleBar" : return this.toggleBar;
 
 
         }

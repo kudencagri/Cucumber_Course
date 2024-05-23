@@ -37,11 +37,44 @@ Feature: DataTable Functionality
         And  Click on the element in Dialog
           | addButton      |
         And  User sending the keys in Dialog
-          | Name      |  CilginAdiyamanlilar     |
+          | Name      |  CilginAdiyamanlilar1     |
         And  Click on the element in Dialog
           | saveButton      |
 
         Then Success message should be displayed
 
         And  User delete the element from Dialog
-          | CilginAdiyamanlilar      |
+          | CilginAdiyamanlilar1      |
+
+        Scenario Outline: Fee Functionality
+          And  Click on the element in LeftNav
+         | setup      |
+         | parameters |
+         | fees    |
+
+          And  Click on the element in Dialog
+            | addButton       |
+
+          And  User sending the keys in Dialog
+            | Name             | <name>      |
+            | CountryCode      | <code>      |
+            | integrationCode  | <intCode>   |
+            | priorityCode     | <Priority>  |
+
+          And  Click on the element in Dialog
+            | toggleBar       |
+            | saveButton      |
+
+          Then Success message should be displayed
+
+          And  User delete the element from Dialog
+            | <name>      |
+
+          Examples:
+            |name |    code    |intCode        |Priority    |
+            |Ada32|    ea1dD   |1235           |32132       |
+            |Ada33|    ea2dD   |1232           |32133       |
+            |Ada34|    ea3dD   |1233           |32134       |
+            |Ada35|    ea4dD   |1234           |32135       |
+
+
