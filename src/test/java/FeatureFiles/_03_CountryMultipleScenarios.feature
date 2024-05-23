@@ -6,12 +6,12 @@ Feature: Country Multi Scenario
     When Enter username and password and click login Button
     Then user should login successfully
     And Navigate to country
-
+  @Regression
   Scenario: Create country
 
     When Create county
     Then Success message should be displayed
-
+  @Regression
   Scenario: Create country 2
 
     When Create county  name as "ise1rs" code as "U125k5"
