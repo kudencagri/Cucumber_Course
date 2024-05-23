@@ -21,9 +21,15 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "//span[text()='Citizenships']")
     public WebElement citizenships;
     @FindBy(xpath = "(//span[text()='Nationalities'])[1]")
-    private WebElement nationalities;
+    public WebElement nationalities;
     @FindBy(xpath = "(//span[text()='Fees'])[1]")
-    private WebElement fees;
+    public WebElement fees;
+    @FindBy(xpath = "//fuse-nav-vertical-collapsable[@class='ng-tns-c1153576442-19 nav-collapsable nav-item ng-star-inserted']")
+    public WebElement EntranceExams;
+    @FindBy(xpath = "//span[@class='nav-link-title ng-tns-c1153576442-20 ng-star-inserted']")
+    public WebElement EntranceSetup;
+    @FindBy(xpath = "//*[@class='nav-link ng-star-inserted active accent']")
+    public WebElement EntranceEx;
 
 
     public WebElement getWebelement(String strElement){
@@ -34,9 +40,12 @@ public class LeftNav extends Parent {
             case "citizenships" : return this.citizenships;
             case "nationalities" : return this.nationalities;
             case "fees" : return this.fees;
+            case "EntranceExams" : return this.EntranceExams;
+            case "EntranceSetup" : return this.EntranceSetup;
+            case "EntranceEx" : return this.EntranceEx;
         }
         return null;
     }
 
-
+//span[@class='nav-link-title ng-tns-c1153576442-20 ng-star-inserted']
 }

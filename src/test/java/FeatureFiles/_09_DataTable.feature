@@ -45,7 +45,7 @@ Feature: DataTable Functionality
 
         And  User delete the element from Dialog
           | CilginAdiyamanlilar1      |
-
+#  bunun altı mustafada var
         Scenario Outline: Fee Functionality
           And  Click on the element in LeftNav
          | setup      |

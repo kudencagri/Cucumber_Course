@@ -69,13 +69,13 @@ public class DialogContent extends Parent{
     public WebElement delete;
 
     @FindBy(xpath="//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
-    private WebElement integrationCode;
+    public WebElement integrationCode;
 
     @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']/input")
-    private WebElement priorityCode;
+    public WebElement priorityCode;//ms-save-button[@class='ng-star-inserted'] / button
 
     @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
-    private WebElement toggleBar;
+    public WebElement toggleBar;
 
     public void deleteItem(String searchText){
         mySendKeys(SearchName, searchText);
