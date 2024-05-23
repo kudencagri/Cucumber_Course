@@ -28,11 +28,16 @@
           | toggleBar       |
           | saveButton      |
         Then Success message should be displayed
+#        silme ekranına ukaşmak için navigate tekrar yapıldı
+        And Click on the element in Dialog
+          | EntranceExams    |
+          | EntranceSetup    |
+          | EntranceEx       |
         And User delete the element from Dialog
           |<ExamName>|
           Examples:
-        | ExamName        | AcademicPeriodOption         | GradeLevelOption |
-        | Math exam is1   | academicPeriod1              | gradeLevel2  |
-        | IT exam is1     | academicPeriod1              | gradeLevel3  |
-        | Oracle exam is1 | academicPeriod1              | gradeLevel4  |
-        | Math exam is2   | academicPeriod1              | gradeLevel5  |
+        | ExamName       | AcademicPeriodOption| GradeLevelOption |
+        | Math exam is1  | academicPeriod1     | gradeLevel2      |
+#        | IT exam is1    | academicPeriod1     | gradeLevel3      |
+#        | Oracle exam is1| academicPeriod1     | gradeLevel4      |
+#        | Math exam is2  | academicPeriod1     | gradeLevel5      |

@@ -76,6 +76,13 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
     public WebElement toggleBar;
+    @FindBy(xpath="")
+    public WebElement EntranceExams;
+    @FindBy(xpath="")
+    public WebElement EntranceSetup;
+    @FindBy(xpath="")
+    public WebElement EntranceEx;
+
 
     public void deleteItem(String searchText){
         mySendKeys(SearchName, searchText);
@@ -90,6 +97,7 @@ public class DialogContent extends Parent{
         //fuse-progress-bar/*    -> fuse-progress-bar ın çocukları
         // bu çocukların 0 olana bekle
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("(//div[@class='cdk-virtual-scroll-content-wrapper'])[1]/div/*"),0));
+
 
         Click(DeleteButton);
         Click(delete);
@@ -106,6 +114,9 @@ public class DialogContent extends Parent{
             case "integrationCode" : return this.integrationCode;
             case "priorityCode" : return this.priorityCode;
             case "toggleBar" : return this.toggleBar;
+            case "EntranceExams" : return this.EntranceExams;
+            case "EntranceSetup" : return this.EntranceSetup;
+            case "EntranceEx" : return this.EntranceEx;
 
 
         }

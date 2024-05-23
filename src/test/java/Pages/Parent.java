@@ -36,4 +36,10 @@ public class Parent {
         new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
     }
+    public void myJsClick(WebElement element){
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        scrollToElement(element);
+        JavascriptExecutor js=(JavascriptExecutor)GWD.getDriver();
+        js.executeScript("arguments[0].click();", element);
+    }
 }

@@ -24,11 +24,11 @@ public class LeftNav extends Parent {
     public WebElement nationalities;
     @FindBy(xpath = "(//span[text()='Fees'])[1]")
     public WebElement fees;
-    @FindBy(xpath = "//fuse-nav-vertical-collapsable[@class='ng-tns-c1153576442-19 nav-collapsable nav-item ng-star-inserted']")
+    @FindBy(xpath = "(//span[text()='Entrance Exams'])[1]")
     public WebElement EntranceExams;
-    @FindBy(xpath = "//span[@class='nav-link-title ng-tns-c1153576442-20 ng-star-inserted']")
+    @FindBy(xpath = "(//span[text()='Setup'])[2]")
     public WebElement EntranceSetup;
-    @FindBy(xpath = "//*[@class='nav-link ng-star-inserted active accent']")
+    @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
     public WebElement EntranceEx;
 
 
